@@ -6,7 +6,7 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 20:21:35 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/23 21:07:31 by aymane           ###   ########.fr       */
+/*   Updated: 2025/09/23 22:49:30 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ Span::Span(unsigned int N) : n(N)
 {
     span.reserve(N);
     std::cout << "Span constructor is called \n";
+}
+
+Span::~Span()
+{
+    std::cout << "Span destructor is called\n";
 }
 
 const char* Span::FullSpan::what(void) const throw()
@@ -66,3 +71,4 @@ unsigned int Span::longestSpan(void)
 
     return sorted_span.back() - sorted_span.front();
 }
+

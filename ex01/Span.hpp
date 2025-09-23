@@ -6,7 +6,7 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 20:08:21 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/23 21:02:01 by aymane           ###   ########.fr       */
+/*   Updated: 2025/09/23 22:49:44 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,33 @@ class Span
         
     public :
         Span(unsigned int N);
+        ~Span();
     // mm fct
         void addNumber(int number);
         unsigned int shortestSpan(void);
-        unsigned int longestSpan(void);    
+        unsigned int longestSpan(void);
+        template <typename INPUT>
+        void    add_by_range(INPUT start, INPUT end)
+        {
+            if (span.size() + std::distance(start, end) > n)
+                throw FullSpan();
+            span.insert(span.end(), start, end);
+            
+        };
     // exepetion class    
-    class FullSpan : public std::exception
-    {
-        public :
-            const char* what(void) const throw();
-    };
-    class SmallSpan : public std::exception
-    {
-        public :
-            const char* what(void) const throw();
-    };
+        class FullSpan : public std::exception
+        {
+            public :
+                const char* what(void) const throw();
+        };
+        class SmallSpan : public std::exception
+        {
+            public :
+                const char* what(void) const throw();
+        };
 
     
 };
-
-
-
 
 
 
