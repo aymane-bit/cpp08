@@ -6,12 +6,13 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 20:21:35 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/23 22:49:30 by aymane           ###   ########.fr       */
+/*   Updated: 2025/09/24 17:17:11 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
+// C.O.F
 
 Span::Span(unsigned int N) : n(N)
 {
@@ -19,10 +20,28 @@ Span::Span(unsigned int N) : n(N)
     std::cout << "Span constructor is called \n";
 }
 
+Span::Span(const Span& original)
+{
+    this->n = original.n;
+    this->span = original.span;
+}
+
+Span& Span::operator=(const Span& original)
+{
+    if (this != &original)
+    {
+        this->n = original.n;
+        this->span = original.span;
+    }
+    return *this;
+}
+
 Span::~Span()
 {
     std::cout << "Span destructor is called\n";
 }
+
+// exceptions what overwright
 
 const char* Span::FullSpan::what(void) const throw()
 {
@@ -34,7 +53,7 @@ const char* Span::SmallSpan::what(void) const throw()
     return "the Span is small !\n";
 };
 
-
+// mm fct
 
 void Span::addNumber(int number)
 {
@@ -71,4 +90,3 @@ unsigned int Span::longestSpan(void)
 
     return sorted_span.back() - sorted_span.front();
 }
-

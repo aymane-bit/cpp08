@@ -6,12 +6,14 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 20:08:21 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/23 22:49:44 by aymane           ###   ########.fr       */
+/*   Updated: 2025/09/24 17:17:27 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #ifndef SPAN_HPP
 #define SPAN_HPP
+
 
 #include <iostream>
 #include <exception>
@@ -27,7 +29,10 @@ class Span
 
         
     public :
+    // C.O.F
         Span(unsigned int N);
+        Span(const Span& original);
+        Span& operator=(const Span& original);
         ~Span();
     // mm fct
         void addNumber(int number);
@@ -39,7 +44,6 @@ class Span
             if (span.size() + std::distance(start, end) > n)
                 throw FullSpan();
             span.insert(span.end(), start, end);
-            
         };
     // exepetion class    
         class FullSpan : public std::exception
@@ -52,8 +56,6 @@ class Span
             public :
                 const char* what(void) const throw();
         };
-
-    
 };
 
 
