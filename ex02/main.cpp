@@ -6,12 +6,11 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 19:01:50 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/30 19:07:45 by aymane           ###   ########.fr       */
+/*   Updated: 2025/09/30 19:27:36 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
-#include <iostream>
 
 int main()
 {
