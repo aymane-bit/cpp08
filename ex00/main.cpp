@@ -6,12 +6,11 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 19:58:30 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/23 20:04:35 by aymane           ###   ########.fr       */
+/*   Updated: 2025/10/20 17:57:10 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <vector>
+
 #include "easyfind.hpp"
 
 int main()

@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
 
 TARGET = easyfind
 
-Header = easyfind.hpp
+Header = easyfind.hpp easyfind.tpp 
 
 SRC = main.cpp
 

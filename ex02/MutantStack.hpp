@@ -6,7 +6,7 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 17:19:51 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/30 18:58:11 by aymane           ###   ########.fr       */
+/*   Updated: 2025/10/20 19:22:14 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,11 @@ class MutantStack : public std::stack<T>
         typedef typename std::stack<T>::container_type      container_type;
         typedef typename container_type::iterator           iterator;
         typedef typename container_type::const_iterator     const_iterator;
-
     // C.O.F
         MutantStack();
         ~MutantStack();
         MutantStack(const MutantStack& original);
         MutantStack<T>& operator=(const MutantStack<T>& original);
-  
     // mm fct : iterators
         iterator    begin();
         iterator    end();

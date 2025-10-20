@@ -6,7 +6,7 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 20:21:35 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/24 17:17:11 by aymane           ###   ########.fr       */
+/*   Updated: 2025/10/20 19:21:13 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ Span::~Span()
 
 const char* Span::FullSpan::what(void) const throw()
 {
-    return "the Span is already full !\n";
+    return "the Span is already full !";
 };
 
 const char* Span::SmallSpan::what(void) const throw()
 {
-    return "the Span is small !\n";
+    return "the Span is small !";
 };
 
 // mm fct

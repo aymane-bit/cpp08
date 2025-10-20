@@ -6,7 +6,7 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 20:08:21 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/24 17:17:27 by aymane           ###   ########.fr       */
+/*   Updated: 2025/10/20 18:17:32 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 class Span 
 {
     private :
-        unsigned int n;    
+        unsigned int        n;    
         std::vector<int> span;
 
         
@@ -38,6 +38,7 @@ class Span
         void addNumber(int number);
         unsigned int shortestSpan(void);
         unsigned int longestSpan(void);
+    // template fct
         template <typename INPUT>
         void    add_by_range(INPUT start, INPUT end)
         {

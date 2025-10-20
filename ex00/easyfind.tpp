@@ -6,7 +6,7 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 19:50:12 by aymane            #+#    #+#             */
-/*   Updated: 2025/09/23 19:56:35 by aymane           ###   ########.fr       */
+/*   Updated: 2025/10/20 17:49:59 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,11 @@ const char* NotFound::what(void) const throw()
 }
 
 template <typename T>
-typename   T::iterator easyfind(T &haystack, int needle)
+typename T::iterator easyfind(T &haystack, int needle)
 {
-    typename T::iterator it;
-
-    for (it = haystack.begin(); it != haystack.end(); ++it)
-    {
-        if (*it == needle)
-            return it;
-    }
-    throw NotFound();
-
+    typename T::iterator it = std::find(haystack.begin(), haystack.end(), needle);
+    if (it == haystack.end())
+        throw NotFound();
+    return it;
 }
 
