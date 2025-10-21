@@ -19,7 +19,7 @@ const char* NotFound::what(void) const throw()
 }
 
 template <typename T>
-typename T::iterator easyfind(T &haystack, int needle)
+typename T::iterator easyFind(T &haystack, int needle)
 {
     typename T::iterator it = std::find(haystack.begin(), haystack.end(), needle);
     if (it == haystack.end())

@@ -30,8 +30,6 @@ int main()
     mstack.push(0);
 
     std::cout << "Iterating through stack elements:" << std::endl;
-
-    // Iterate with iterators (begin → end)
     MutantStack<int>::iterator it = mstack.begin();
     MutantStack<int>::iterator ite = mstack.end();
 

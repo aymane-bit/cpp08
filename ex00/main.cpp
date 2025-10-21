@@ -23,11 +23,11 @@ int main()
     try 
     {
         // Try to find 20
-        std::vector<int>::iterator it = easyfind(numbers, 20);
+        std::vector<int>::iterator it = easyFind(numbers, 20);
         std::cout << "Found: " << *it << std::endl;
 
         // Try to find 40 (not in vector)
-        it = easyfind(numbers, 40);
+        it = easyFind(numbers, 40);
         std::cout << "Found: " << *it << std::endl;
     }
     catch (const NotFound &e)

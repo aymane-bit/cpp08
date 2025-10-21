@@ -34,7 +34,7 @@ class MutantStack : public std::stack<T>
     // mm fct : iterators
         iterator    begin();
         iterator    end();
-    
+
         const_iterator    begin() const;
         const_iterator    end() const;
 
